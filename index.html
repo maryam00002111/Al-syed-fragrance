@@ -706,29 +706,7 @@
 // Products and settings are loaded from JSON files managed by Decap CMS.
 // Fallback hardcoded data is used when files are not yet available (local dev / first run).
 
-const FALLBACK_PRODUCTS = [
-  {id:1,name:'Oud Royale',cat:'new-arrival',price:2800,price50:3500,badge:'New',desc:'A regal blend of deep oud, saffron, and amber. Opens with a spicy kick and settles into a warm, woody, luxurious base. Perfect for evenings and special occasions.',img:'https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?w=600&q=80'},
-  {id:2,name:'Rose Noir',cat:'new-arrival',price:2400,price50:3200,badge:'New',desc:'Dark rose petals meet vetiver and patchouli in this intoxicating feminine fragrance. A modern oriental with a mysterious, sensual character.',img:'https://images.unsplash.com/photo-1541643600914-78b084683702?w=600&q=80'},
-  {id:3,name:'Amber Mystique',cat:'new-arrival',price:2600,price50:3400,badge:'New',desc:'Warm amber and tonka bean enveloped in vanilla and sandalwood. A cozy, rich scent that lingers beautifully throughout the day.',img:'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80'},
-  {id:4,name:'Crystal Musk',cat:'new-arrival',price:2200,price50:2900,badge:'New',desc:'Airy, clean white musk with hints of bergamot and cedarwood. Light yet distinctive — a perfect everyday signature.',img:'https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=600&q=80'},
-  {id:5,name:'Blossom Elegance',cat:'women',price:2500,price50:3300,badge:null,desc:'Delicate florals of jasmine and peony dance over a base of white cedar. Feminine, graceful, and unforgettable.',img:'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80'},
-  {id:6,name:'Velvet Rose',cat:'women',price:2700,price50:3500,badge:'Popular',desc:'A lush, velvety rose fragrance with deep notes of oud and musk. For the woman who commands attention effortlessly.',img:'https://images.unsplash.com/photo-1541643600914-78b084683702?w=600&q=80'},
-  {id:7,name:'Jasmine Dusk',cat:'women',price:2300,price50:3000,badge:null,desc:'The magic hour captured in scent. Jasmine and tuberose over warm amber and vanilla — ethereal and romantic.',img:'https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=600&q=80'},
-  {id:8,name:'Pearl Lumière',cat:'women',price:2600,price50:3400,badge:null,desc:'Crisp aldehydes, iris, and sandalwood create a timeless, classic feminine with modern depth and longevity.',img:'https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?w=600&q=80'},
-  {id:9,name:'Dark Suede',cat:'men',price:2500,price50:3300,badge:'Bestseller',desc:'Rich suede, tobacco, and dark woods combine in a powerful masculine statement. Bold, confident, and unmistakably refined.',img:'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80'},
-  {id:10,name:'Midnight Spice',cat:'men',price:2800,price50:3600,badge:null,desc:'Black pepper, cardamom and vetiver on a bed of leather and oud. An intense, sophisticated fragrance for the modern gentleman.',img:'https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?w=600&q=80'},
-  {id:11,name:'Aqua Royale',cat:'men',price:2200,price50:2900,badge:null,desc:'Clean aquatic notes with grapefruit and cedarwood. Fresh and invigorating — ideal for the office or casual wear.',img:'https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=600&q=80'},
-  {id:12,name:'Cedar & Smoke',cat:'men',price:2600,price50:3400,badge:null,desc:'Smoky birch, cedarwood and vetiver with a hint of bergamot. A contemplative, woody scent for those who walk their own path.',img:'https://images.unsplash.com/photo-1541643600914-78b084683702?w=600&q=80'},
-  {id:13,name:'Royal Couple Bundle',cat:'bundle',price:5500,price50:null,badge:'Bundle',desc:'His & Hers luxury duo — Dark Suede + Velvet Rose. The perfect gift for couples. Presented in premium gift packaging.',img:'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80'},
-  {id:14,name:'Discovery Trio',cat:'bundle',price:6500,price50:null,badge:'Bundle',desc:'Explore three signature scents: Oud Royale + Jasmine Dusk + Aqua Royale. 30ml each — perfect for building your collection.',img:'https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?w=600&q=80'},
-  {id:15,name:'Oud Heritage Set',cat:'bundle',price:7200,price50:null,badge:'Best Value',desc:'Two 50ml bottles of our finest oud-based fragrances: Midnight Spice + Rose Noir. Pure oriental luxury.',img:'https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=600&q=80'},
-  {id:16,name:'Weekend Essentials',cat:'bundle',price:4800,price50:null,badge:'Bundle',desc:'Three 30ml travel-friendly fragrances — Aqua Royale + Blossom Elegance + Crystal Musk. Perfect for any occasion.',img:'https://images.unsplash.com/photo-1541643600914-78b084683702?w=600&q=80'},
-  {id:17,name:'Oud Legacy',cat:'best-seller',price:3200,price50:4000,badge:'#1 Seller',desc:'Our signature fragrance. Deep, warm, and timeless. A masterful blend of aged oud, roses, and sandalwood. Unmatched longevity.',img:'https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?w=600&q=80'},
-  {id:18,name:'Golden Saffron',cat:'best-seller',price:2900,price50:3700,badge:'Top Pick',desc:'Saffron and orange blossom on a rich amber base. Opulent, warm, and deeply satisfying — a crowd favourite.',img:'https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?w=600&q=80'},
-  {id:19,name:'Noir Intense',cat:'best-seller',price:2700,price50:3500,badge:'Top Pick',desc:'An intense, smoky interpretation of our classic Noir. Dark florals, oud and patchouli create a hypnotic trail.',img:'https://images.unsplash.com/photo-1541643600914-78b084683702?w=600&q=80'},
-  {id:20,name:'White Oud',cat:'best-seller',price:3000,price50:3800,badge:'Top Pick',desc:'Light, creamy oud with white florals and musk. A modern take on the classic oriental — wearable, beloved, iconic.',img:'https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=600&q=80'},
-];
-
+const FALLBACK_PRODUCTS = [];
 // Products array — will be populated by loadCMSData()
 let products = [];
 
