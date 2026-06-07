@@ -4,5 +4,6 @@
   "name": "test 123",
   "price": 121,
   "badge": "12",
-  "description": "122"
+  "description": "122",
+  "image": "/uploads/img-20260605-wa0001.jpg"
 }
