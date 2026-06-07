@@ -72,7 +72,7 @@ collections:
             name: "email"
             widget: "string"
             default: "alsyedfragrance85@gmail.com"
-
+hi
   # ----------------------------------------------------------
   #  2. HERO SECTION  (cover image, headline, sub-text, CTA)
   # ----------------------------------------------------------
@@ -119,7 +119,9 @@ collections:
     label: "🧴 Products"
     label_singular: "Product"
     folder: "_data/products"      # One JSON file per product
-    create: true                   # Allow adding new products
+    create: true                    # Allow adding new products
+    format:"json"
+    extension:"json"
     slug: "{{slug}}"               # File name = slugified product name
     identifier_field: "name"
     summary: "{{name}} — {{category}} — Rs {{price}}"
