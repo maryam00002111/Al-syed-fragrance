@@ -4,8 +4,7 @@
 # ============================================================
 
 backend:
-  name: git-gateway          # Works with Netlify Identity (free)
-  branch: main               # Branch to update (change to "master" if needed)
+  name: git-gateway          
 
 # Where uploaded media files are stored in the repo
 media_folder: "public/uploads"
