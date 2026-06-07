@@ -1,9 +1,9 @@
 ---
 name: Dark Hide
 category: men
-image: /uploads/img-20260605-wa0001.jpg
+image: /uploads/img-20260605-wa0002.jpg
 price: 1550
-price_50: 2550
+price_50: 255
 description: >-
   This perfume opens with a soft blend of citrus and almond, giving a fresh yet
   slightly nutty first impression. As it settles, delicate white florals and a
