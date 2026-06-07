@@ -4,35 +4,21 @@
 # ============================================================
 
 backend:
-  name: git-gateway          
+  name: git-gateway
   branch: main
-# Where uploaded media files are stored in the repo
-media_folder: "public/uploads"
 
-# How those files are referenced in the front-end HTML
+media_folder: "public/uploads"
 public_folder: "/uploads"
 
-# Show a live preview pane inside the CMS editor
-# (optional — remove if you don't need it)
-# site_url: https://your-site.netlify.app
-
-# ============================================================
-#  COLLECTIONS
-# ============================================================
 collections:
 
-  # ----------------------------------------------------------
-  #  1. SITE SETTINGS  (logo, brand name, tagline, WhatsApp)
-  # ----------------------------------------------------------
   - name: "settings"
     label: "⚙️ Site Settings"
     files:
-
       - name: "general"
         label: "General Settings"
         file: "_data/settings.json"
         fields:
-
           - label: "Brand Name"
             name: "brand_name"
             widget: "string"
@@ -71,19 +57,14 @@ collections:
             name: "email"
             widget: "string"
             default: "alsyedfragrance85@gmail.com"
-hi
-  # ----------------------------------------------------------
-  #  2. HERO SECTION  (cover image, headline, sub-text, CTA)
-  # ----------------------------------------------------------
+
   - name: "hero"
     label: "🖼️ Hero / Cover Section"
     files:
-
       - name: "hero_main"
         label: "Hero Section"
         file: "_data/hero.json"
         fields:
-
           - label: "Hero Background Image"
             name: "image"
             widget: "image"
@@ -111,23 +92,18 @@ hi
             widget: "string"
             default: "Explore Collection"
 
-  # ----------------------------------------------------------
-  #  3. PRODUCTS
-  # ----------------------------------------------------------
   - name: "products"
     label: "🧴 Products"
     label_singular: "Product"
-    folder: "_data/products"      # One JSON file per product
-    create: true                    # Allow adding new products
-    format:"json"
-    extension:"json"
-    slug: "{{slug}}"               # File name = slugified product name
+    folder: "_data/products"
+    create: true
+    format: "json"
+    extension: "json"
+    slug: "{{slug}}"
     identifier_field: "name"
     summary: "{{name}} — {{category}} — Rs {{price}}"
     sortable_fields: ["name", "category", "price"]
-
     fields:
-
       - label: "Product Name"
         name: "name"
         widget: "string"
@@ -137,11 +113,11 @@ hi
         name: "category"
         widget: "select"
         options:
-          - { label: "Men",          value: "men" }
-          - { label: "Women",        value: "women" }
-          - { label: "New Arrival",  value: "new-arrival" }
+          - { label: "Men", value: "men" }
+          - { label: "Women", value: "women" }
+          - { label: "New Arrival", value: "new-arrival" }
           - { label: "Bundle Offer", value: "bundle" }
-          - { label: "Best Seller",  value: "best-seller" }
+          - { label: "Best Seller", value: "best-seller" }
         default: "new-arrival"
 
       - label: "Product Image"
