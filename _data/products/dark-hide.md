@@ -1,7 +1,7 @@
 ---
 name: Dark Hide
 category: men
-image: /uploads/img-20260605-wa0002.jpg
+image: /uploads/img-20260605-wa0001.jpg
 price: 1550
 price_50: 2550
 description: >-
