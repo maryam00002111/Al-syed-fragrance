@@ -11,6 +11,12 @@
   to   = "/admin/index.html"
   status = 200
 
+  # Explicitly serve uploads folder
+[[redirects]]
+  from = "/uploads/*"
+  to   = "/uploads/:splat"
+  status = 200
+
 # Serve _data JSON files with correct content-type + no cache
 # so the frontend always gets fresh CMS data after every publish
 [[headers]]
