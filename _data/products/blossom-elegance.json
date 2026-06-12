@@ -1,1 +1,10 @@
-{"name":"Blossom Elegance","category":"women","image":"","price":2500,"price_50":3300,"badge":null,"description":"Delicate florals of jasmine and peony dance over a base of white cedar. Feminine, graceful, and unforgettable.","published":true}
+{
+  "name": "MidNight",
+  "category": "women",
+  "image": "",
+  "price": 1600,
+  "price_50": 2650,
+  "badge": null,
+  "description": "Midnight blends luscious fruits, sparkling citrus, and tropical sweetness with soft floral and white floral notes. Fresh, radiant, and effortlessly charming, it is a fragrance that captures the magic of warm evenings and unforgettable moments.",
+  "published": true
+}
