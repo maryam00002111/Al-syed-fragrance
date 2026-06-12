@@ -1,9 +1,10 @@
 {
-  "category": "new-arrival",
+  "category": "women",
   "published": true,
-  "name": "test 123",
-  "price": 121,
-  "badge": "12",
-  "description": "122",
-  "image": "/uploads/img-20260605-wa0001.jpg"
+  "name": "Secret Bloom",
+  "price": 1600,
+  "badge": "",
+  "description": "Secret Bloom blends sweet vanilla, creamy cacao, and soft almond with radiant white florals and warm spices. Wrapped in amber and woody notes with a delicate powdery finish, it is a sophisticated fragrance that feels both alluring and effortlessly elegant.",
+  "image": "",
+  "price_50": 2550
 }
