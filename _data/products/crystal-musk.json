@@ -1,1 +1,10 @@
-{"name":"Crystal Musk","category":"new-arrival","image":"","price":2200,"price_50":2900,"badge":"New","description":"Airy, clean white musk with hints of bergamot and cedarwood. Light yet distinctive — a perfect everyday signature.","published":true}
+{
+  "name": "Veloria",
+  "category": "women",
+  "image": "",
+  "price": 1550,
+  "price_50": 2450,
+  "badge": "",
+  "description": "Veloria is a radiant and refreshing fragrance that blooms with delicate floral notes and the soft elegance of fresh roses. Bright citrus accents add a sparkling freshness, while aquatic nuances evoke the feeling of a gentle ocean breeze. Subtle woody undertones and a touch of fresh spice bring balance and sophistication, creating a scent that is graceful, uplifting, and effortlessly elegant.",
+  "published": true
+}
