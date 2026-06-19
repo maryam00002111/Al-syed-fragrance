@@ -644,7 +644,7 @@
           <a class="social-link" href="https://instagram.com/al_syed_fragrance" target="_blank" aria-label="Instagram">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/></svg>
           </a>
-          <a class="social-link" href="https://facebook.com/Alsyedfragrance" target="_blank" aria-label="Facebook">
+          <a class="social-link" href="https://www.facebook.com/share/1Be25VJomk/" target="_blank" aria-label="Facebook">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
           </a>
           <a class="social-link" href="mailto:alsyedfragrance85@gmail.com" aria-label="Email">
@@ -1237,7 +1237,6 @@ function addToCart(item){
   if(existing){existing.qty++;existing.price=item.price;}
   else cart.push({...item,qty:1});
   updateCartUI();
-  openCart();
 }
 function removeFromCart(id,size){
   cart=cart.filter(c=>!(c.id===id&&c.selectedSize===size));
