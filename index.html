@@ -931,7 +931,7 @@ async function loadCMSData(){
       }
       if(s.facebook){
         const fbLink = document.querySelector('a[href*="facebook"]');
-        if(fbLink) fbLink.href = `https://facebook.com/${s.facebook}`;
+        if(fbLink) fbLink.href = s.facebook.startsWith('http') ? s.facebook : `https://facebook.com/${s.facebook}`;
       }
       if(s.email){
         const emailLink = document.querySelector('a[href*="mailto"]');
