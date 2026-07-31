@@ -5,5 +5,8 @@
   "name": "Floral Queen",
   "price": 1600,
   "price_50": 2600,
-  "image": "/uploads/whatsapp-image-2026-07-31-at-11.09.13-am.jpeg"
+  "image": "/uploads/whatsapp-image-2026-07-31-at-11.09.13-am.jpeg",
+  "extraCats": [
+    "new-arrival"
+  ]
 }
