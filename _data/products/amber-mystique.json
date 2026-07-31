@@ -1,10 +1,13 @@
 {
-  "name": "Dark Hide",
-  "category": "men",
-  "image": "/uploads/darkhide.jpg",
-  "price": 1650,
-  "price_50": 2600,
   "badge": "New",
+  "price": 1650,
+  "name": "Dark Hide",
+  "extraCats": [
+    "new-arrival"
+  ],
+  "published": true,
+  "price_50": 2600,
+  "image": "/uploads/darkhide.jpg",
   "description": "This perfume opens with a soft blend of citrus and almond, giving a fresh yet slightly nutty first impression. As it settles, delicate white florals and a powdery softness create an elegant and clean heart that feels smooth and feminine.\nIn the base, warm vanilla, cacao, amber, and woody notes come forward, adding depth, sweetness, and a cozy sensual warmth. A touch of warm spice enhances the richness and makes the scent more luxurious and long-lasting.\nOverall, it is a sweet, warm, and slightly gourmand fragrance with a soft floral elegance and a creamy, comforting finish.",
-  "published": true
+  "category": "men"
 }
