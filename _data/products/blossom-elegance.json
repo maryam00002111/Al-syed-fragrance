@@ -1,10 +1,13 @@
 {
-  "name": "MidNight",
-  "category": "women",
-  "image": "/uploads/midnight.jpg",
-  "price": 1600,
-  "price_50": 2650,
   "badge": null,
+  "price": 1600,
+  "name": "MidNight",
+  "extraCats": [
+    "new-arrival"
+  ],
+  "published": true,
+  "price_50": 2650,
+  "image": "/uploads/midnight.jpg",
   "description": "Midnight blends luscious fruits, sparkling citrus, and tropical sweetness with soft floral and white floral notes. Fresh, radiant, and effortlessly charming, it is a fragrance that captures the magic of warm evenings and unforgettable moments.",
-  "published": true
+  "category": "women"
 }
