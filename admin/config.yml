@@ -120,6 +120,19 @@ collections:
           - { label: "Best Seller", value: "best-seller" }
         default: "new-arrival"
 
+        - label: "Also show in (extra categories)"
+        name: "extraCats"
+        widget: "select"
+        multiple: true
+        required: false
+        options:
+          - { label: "Men", value: "men" }
+          - { label: "Women", value: "women" }
+          - { label: "New Arrival", value: "new-arrival" }
+          - { label: "Bundle Offer", value: "bundle" }
+          - { label: "Best Seller", value: "best-seller" }
+        hint: "Optional. Pick extra categories to show this product in without duplicating it."
+
       - label: "Product Image"
         name: "image"
         widget: "image"
