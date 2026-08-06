@@ -1,0 +1,14 @@
+{
+  "buy_button_text": "Buy Now",
+  "enabled": true,
+  "show_price": true,
+  "required_count": 3,
+  "enable_50ml": false,
+  "deal_price": 3300,
+  "enable_30ml": true,
+  "title": "Azadi Offer",
+  "image": "/uploads/img-20260804-wa0004.jpg",
+  "cart_button_text": "Add To Cart",
+  "description": "Pick your favourite perfumes and build your own bundle.",
+  "default_size": "30ml"
+}
