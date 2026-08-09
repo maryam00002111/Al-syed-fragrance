@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>For Arshmah</title>
+<meta name="description" content="A little world made just for you.">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/entrance.css">
+<link rel="stylesheet" href="css/welcome.css">
+<link rel="stylesheet" href="css/storybook.css">
+<link rel="stylesheet" href="css/coffee.css">
+<link rel="stylesheet" href="css/montage.css">
+<link rel="stylesheet" href="css/poetry.css">
+<link rel="stylesheet" href="css/lockedvideo.css">
+<link rel="stylesheet" href="css/timecapsule.css">
+<link rel="stylesheet" href="css/signature.css">
+<link rel="stylesheet" href="css/finale.css">
+<link rel="stylesheet" href="css/floatingenvelope.css">
+<!-- Netlify Identity: catches invite/recovery/confirmation links that land
+     on the root domain and redirects them into the CMS, where the widget
+     can actually process them. Standard fix for Decap CMS + git-gateway. -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.location.hash && window.location.hash.match(/access_token|invite_token|recovery_token|confirmation_token/)) {
+    window.location.href = "/admin/" + window.location.hash;
+  }
+</script>
+</head>
+<body>
+
+<!-- ============================== ENTRANCE ============================== -->
+<section id="entrance" aria-label="Enter the password to begin">
+  <div class="entrance-eyebrow eyebrow">a little world, just for you</div>
+  <h1 class="entrance-title script">For Arshmah</h1>
+
+  <div class="polaroid-stack" id="polaroidStack" aria-hidden="true">
+    <!-- polaroid divs injected by JS from content.entrancePhotos, with graceful placeholder fallback -->
+  </div>
+
+  <div class="password-block">
+    <div class="password-dots" id="passwordDots" role="status" aria-label="Password entry"></div>
+    <p class="entrance-feedback" id="entranceFeedback" aria-live="polite">Enter the password to unlock your surprise</p>
+    <div class="keypad" id="keypad">
+      <button type="button" data-key="1">1</button>
+      <button type="button" data-key="2">2</button>
+      <button type="button" data-key="3">3</button>
+      <button type="button" data-key="4">4</button>
+      <button type="button" data-key="5">5</button>
+      <button type="button" data-key="6">6</button>
+      <button type="button" data-key="7">7</button>
+      <button type="button" data-key="8">8</button>
+      <button type="button" data-key="9">9</button>
+      <button type="button" class="key-clear" data-action="clear">Clear</button>
+      <button type="button" data-key="0">0</button>
+      <button type="button" class="key-back" data-action="back" aria-label="Delete last digit">⌫</button>
+    </div>
+  </div>
+</section>
+
+<canvas id="unlockBurst" class="unlock-burst" aria-hidden="true"></canvas>
+
+<!-- ============================== MAIN EXPERIENCE ============================== -->
+<main id="experience">
+
+  <!-- ---------- Birthday Countdown + Welcome ---------- -->
+  <section id="welcome" class="section" aria-labelledby="welcomeTitle">
+    <div class="glow-backdrop" aria-hidden="true"></div>
+    <div class="particle-layer" id="welcomeParticles" aria-hidden="true"></div>
+    <div class="section-inner">
+      <p class="eyebrow fade-el">welcome, my dearest friend</p>
+      <h2 id="welcomeTitle" class="fade-el">The day you were born,<br>my world got softer.</h2>
+      <p class="welcome-message fade-el">
+        I don't think you ever knew this, but the day you were born wasn't just a good day for
+        your family — it was a good day for mine too, because it meant that somewhere out there,
+        my best friend had just arrived. Every laugh we've shared, every 2am voice note, every
+        silly fight that ended in an even sillier apology — it all started with your birth. So
+        today isn't just about celebrating you being one year older. It's about me getting to say
+        thank you, for existing, for choosing me, for staying.
+      </p>
+
+      <div class="countdown fade-el" id="countdown" aria-live="off">
+        <div class="countdown-unit"><div class="countdown-value" id="cd-days">00</div><div class="countdown-label">Days</div></div>
+        <div class="countdown-unit"><div class="countdown-value" id="cd-hours">00</div><div class="countdown-label">Hours</div></div>
+        <div class="countdown-unit"><div class="countdown-value" id="cd-mins">00</div><div class="countdown-label">Mins</div></div>
+        <div class="countdown-unit"><div class="countdown-value" id="cd-secs">00</div><div class="countdown-label">Secs</div></div>
+      </div>
+      <p class="fade-el is-hidden" id="birthdayArrived" style="color:var(--rose-deep); font-family:var(--font-display); font-size:var(--step-1);">
+        It's here. Happy birthday, Arshmah. 🤍
+      </p>
+
+      <button type="button" class="music-toggle fade-el" id="musicToggle" aria-pressed="false">
+        <span class="dot" aria-hidden="true"></span>
+        <span id="musicToggleLabel">Play our song</span>
+      </button>
+
+      <div class="scroll-cue fade-el" aria-hidden="true">
+        <span class="line"></span>
+        <span>keep going</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- School-era storybook path ---------- -->
+  <section id="schoolStorybook" class="storybook" aria-labelledby="storybookTitle">
+    <div class="storybook-sky" id="storybookSky" aria-hidden="true"></div>
+    <div class="particle-layer" id="storybookParticles" aria-hidden="true"></div>
+    <div class="storybook-inner">
+      <div class="storybook-heading">
+        <p class="eyebrow fade-el">where it all began</p>
+        <h2 id="storybookTitle" class="fade-el">Our School Story</h2>
+      </div>
+
+      <div class="path-track" id="pathTrack">
+        <div class="path-avatars" aria-hidden="true">
+          <div class="avatar-marker avatar-me" id="avatarMe">🧕</div>
+          <div class="avatar-marker avatar-her" id="avatarHer">👧</div>
+        </div>
+        <div class="checkpoint-list" id="checkpointList"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- University transition ---------- -->
+  <section id="universityTransition" class="section" aria-labelledby="universityTitle" style="background:var(--lavender);">
+    <div class="transition-banner">
+      <p class="eyebrow fade-el">a new chapter</p>
+      <h2 id="universityTitle" class="fade-el">Then We Grew Up</h2>
+      <p class="fade-el" style="max-width:480px; margin:0 auto; color:var(--ink-soft);">
+        Different classrooms, different cities maybe, but somehow the friendship only got sturdier.
+        The path continues here — same us, new chapter.
+      </p>
+      <div class="university-gallery fade-el" id="universityGallery"></div>
+    </div>
+  </section>
+
+  <!-- ---------- Coffee mini-game ---------- -->
+  <section id="coffeeGame" class="section coffee-section" aria-labelledby="coffeeTitle">
+    <div class="section-inner coffee-inner">
+      <p class="eyebrow fade-el">a little break</p>
+      <h2 id="coffeeTitle" class="fade-el">Make Yourself a Coffee</h2>
+      <p class="fade-el" style="color:var(--ink-soft);">Before the next chapter, let's slow down for a moment.</p>
+
+      <div class="coffee-stepper" id="coffeeStepper"></div>
+
+      <div class="cup-select" id="cupSelect">
+        <button type="button" class="cup-option" data-cup="classic" aria-label="Classic mug">☕</button>
+        <button type="button" class="cup-option" data-cup="tall" aria-label="Tall glass">🥤</button>
+        <button type="button" class="cup-option" data-cup="cute" aria-label="Cute cup">🍵</button>
+      </div>
+
+      <div class="coffee-stage" id="coffeeStage">
+        <div class="coffee-cup" id="coffeeCup" tabindex="0" role="application"
+             aria-label="Coffee cup. During the stir step, swirl your finger or mouse around the cup, or press the left and right arrow keys to stir.">
+          <div class="cup-steam" aria-hidden="true"><span></span><span></span><span></span></div>
+          <svg class="stir-ring" id="stirRing" viewBox="0 0 140 140" aria-hidden="true">
+            <circle id="stirCircleProgress" cx="70" cy="70" r="58"></circle>
+          </svg>
+          <div class="cup-body">
+            <div class="cup-liquid" id="cupLiquid"></div>
+            <div id="cupSugarLayer"></div>
+            <div class="cup-spoon" id="cupSpoon" aria-hidden="true">🥄</div>
+          </div>
+          <div class="cup-handle" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <div class="coffee-controls" id="coffeeControls"></div>
+      <p class="coffee-keyboard-hint is-hidden" id="coffeeKeyboardHint">Cup is focused — press ← / → to stir</p>
+
+      <div class="coffee-complete is-hidden" id="coffeeComplete">
+        <p>You must be tired by now… ☕💕 Have some coffee, take a little break, and keep going! There are still so many exciting surprises waiting for you ahead… 👀✨</p>
+        <button type="button" class="coffee-action-btn" onclick="document.getElementById('montage').scrollIntoView({behavior:'smooth'})">Continue the story</button>
+        <div><button type="button" class="coffee-reset" onclick="window.CoffeeGame.reset()">Make another coffee</button></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Friendship video montage ---------- -->
+  <section id="montage" class="section montage-section" aria-labelledby="montageTitle">
+    <div class="section-inner">
+      <p class="eyebrow fade-el">every version of us</p>
+      <h2 id="montageTitle" class="fade-el">A Little Montage</h2>
+      <p class="montage-sub fade-el">All the years, all the memories, in a few minutes.</p>
+
+      <div class="montage-player fade-el" id="montagePlayer">
+        <video id="montageVideo" playsinline controls></video>
+        <button type="button" class="montage-play-btn" id="montagePlayBtn" aria-label="Play video">
+          <span class="montage-play-icon">▶</span>
+        </button>
+        <div class="montage-empty is-hidden" id="montageEmpty">Your friendship montage will appear here once the video is uploaded in the CMS.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Urdu poetry (text only) ---------- -->
+  <section id="poetrySection" class="section poetry-section" aria-labelledby="poetryTitle">
+    <div class="poetry-glow" aria-hidden="true"></div>
+    <div class="poetry-inner">
+      <p class="eyebrow fade-el" style="margin-bottom:0.5rem;">for you, in words</p>
+      <h2 id="poetryTitle" class="fade-el is-visible" style="font-size:var(--step-2); margin-bottom:2rem;">Ek Nazm</h2>
+      <div class="poetry-lines" id="poetryLines" lang="ur"></div>
+    </div>
+  </section>
+
+  <!-- ---------- Favourite video (replaces the old voice note section) ---------- -->
+  <section id="lockedVideoSection" class="section locked-section" aria-labelledby="lockedTitle">
+    <div class="section-inner">
+      <p class="eyebrow fade-el">just for you</p>
+      <h2 id="lockedTitle" class="fade-el">A Favourite of Mine</h2>
+      <p class="fade-el" style="color:rgba(255,255,255,0.7); max-width:400px; margin:0 auto 2rem;">
+        This one's private. You'll need the password to see it.
+      </p>
+
+      <div class="locked-box">
+        <video id="lockedVideo" playsinline controls class="is-hidden"></video>
+        <div class="locked-overlay" id="lockedOverlay">
+          <div class="lock-icon" aria-hidden="true">🔒</div>
+          <p class="locked-message">Enter the password to unlock this video</p>
+          <form class="locked-password-form" id="lockedPasswordForm">
+            <label for="lockedPasswordInput" class="visually-hidden">Password</label>
+            <input type="password" id="lockedPasswordInput" placeholder="Password" autocomplete="off" inputmode="text">
+            <button type="submit">Unlock</button>
+          </form>
+          <p class="locked-feedback" id="lockedFeedback" aria-live="polite"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Future time capsule ---------- -->
+  <section id="capsuleSection" class="capsule-section" aria-labelledby="capsuleTitle">
+    <div class="capsule-sky" id="capsuleSky" aria-hidden="true">
+      <div class="capsule-moon"></div>
+    </div>
+    <div class="capsule-content">
+      <div class="capsule-avatars" aria-hidden="true"><span>🧕</span><span>👧</span></div>
+      <p class="eyebrow fade-el">looking ahead, together</p>
+      <h2 id="capsuleTitle" class="fade-el" style="font-size:var(--step-2);">A Time Capsule for Us</h2>
+
+      <div class="vault" id="vault" role="button" tabindex="0" aria-label="Open the time capsule">🔒</div>
+
+      <div id="capsulePasswordWrap" class="is-hidden">
+        <form class="capsule-password-form" id="capsulePasswordForm">
+          <label for="capsulePasswordInput" class="visually-hidden">Password</label>
+          <input type="password" id="capsulePasswordInput" placeholder="Password" autocomplete="off">
+          <button type="submit">Open</button>
+        </form>
+      </div>
+      <p class="capsule-feedback" id="capsuleFeedback" aria-live="polite"></p>
+      <p class="capsule-tap-hint" id="capsuleTapHint">Tap the vault to open it</p>
+
+      <div class="capsule-reveal" id="capsuleReveal"></div>
+    </div>
+  </section>
+
+  <!-- ---------- "Always Be Mine" signature ---------- -->
+  <section id="signatureSection" class="section signature-section" aria-labelledby="signatureTitle">
+    <div class="section-inner">
+      <p class="eyebrow fade-el">just for fun, but I mean it</p>
+      <h2 id="signatureTitle" class="fade-el" style="font-size:var(--step-2);">Always Be Mine</h2>
+
+      <div class="signature-scroll fade-el">
+        <div class="signature-seal" id="signatureSeal" aria-hidden="true">✓</div>
+        <p class="signature-agreement-title script">A Friendship Agreement</p>
+        <p class="signature-agreement-text">
+          This is not a legal contract — just a playful little promise between us. Sign below to
+          make it official (in the most unofficial way possible).
+        </p>
+        <div class="signature-pad-wrap" id="signaturePadWrap">
+          <canvas id="signatureCanvas" aria-label="Signature pad — draw your signature here"></canvas>
+          <p class="signature-placeholder-text" id="signaturePlaceholderText">sign here</p>
+        </div>
+        <div class="signature-line"></div>
+        <div class="signature-controls">
+          <button type="button" class="signature-btn signature-btn-clear" id="signatureClearBtn">Clear</button>
+          <button type="button" class="signature-btn signature-btn-submit" id="signatureSubmitBtn">Seal It</button>
+        </div>
+        <p class="signature-feedback" id="signatureFeedback" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------- Grand finale ---------- -->
+  <section id="finaleSection" class="finale-section" aria-labelledby="finaleTitle">
+    <canvas class="finale-confetti-canvas" id="finaleConfetti" aria-hidden="true"></canvas>
+    <div class="finale-particles" id="finaleParticles" aria-hidden="true"></div>
+    <div class="finale-content" id="finaleContent">
+      <p class="eyebrow finale-eyebrow">happy birthday, arshmah</p>
+      <h2 id="finaleTitle" class="finale-title">Here's to Us</h2>
+      <p class="finale-message">
+        Thank you for every memory on this little path — the old ones and the ones we haven't
+        made yet. I'm so lucky to call you my best friend. Here's to many, many more birthdays
+        together. I love you. 🤍
+      </p>
+      <div class="finale-media" id="finaleMedia"></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Secret letter modal, reused by every envelope on the path -->
+<div class="letter-modal" id="letterModal" role="dialog" aria-modal="true" aria-labelledby="letterModalTitle">
+  <div class="letter-envelope">
+    <button type="button" class="letter-close" id="letterModalClose" aria-label="Close letter">✕</button>
+    <h3 class="letter-title" id="letterModalTitle">What I Never Told You</h3>
+    <p class="letter-body" id="letterModalBody"></p>
+  </div>
+</div>
+
+<!-- Floating envelope — separate feature from the storybook letters above -->
+<button type="button" class="floating-envelope" id="floatingEnvelopeBtn" aria-haspopup="dialog" aria-controls="floatingEnvelopeModal" aria-label="Open a little floating envelope">
+  <span aria-hidden="true">💌</span>
+</button>
+<div class="floating-envelope-modal" id="floatingEnvelopeModal" role="dialog" aria-modal="true" aria-labelledby="floatingEnvelopeTitle">
+  <div class="floating-envelope-card">
+    <button type="button" class="floating-envelope-close" id="floatingEnvelopeClose" aria-label="Close envelope">✕</button>
+    <div class="floating-envelope-visual" aria-hidden="true">
+      <span class="fe-body"></span>
+      <span class="fe-flap"></span>
+      <span class="fe-heart">🤍</span>
+    </div>
+    <h3 class="floating-envelope-title" id="floatingEnvelopeTitle">Just a Little Something</h3>
+    <p class="floating-envelope-message" id="floatingEnvelopeMessage"></p>
+  </div>
+</div>
+
+<audio id="bgMusic" loop preload="none"></audio>
+
+<script src="js/content.js"></script>
+<script src="js/main.js"></script>
+<script src="js/storybook.js"></script>
+<script src="js/coffee-game.js"></script>
+<script src="js/montage.js"></script>
+<script src="js/poetry-data.js"></script>
+<script src="js/poetry.js"></script>
+<script src="js/locked-video.js"></script>
+<script src="js/timecapsule-data.js"></script>
+<script src="js/timecapsule.js"></script>
+<script src="js/signature.js"></script>
+<script src="js/finale.js"></script>
+<script src="js/floating-envelope.js"></script>
+</body>
+</html>
