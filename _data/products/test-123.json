@@ -1,10 +1,13 @@
 {
-  "category": "women",
-  "published": true,
-  "name": "Secret Bloom",
-  "price": 1600,
   "badge": "",
-  "description": "Secret Bloom blends sweet vanilla, creamy cacao, and soft almond with radiant white florals and warm spices. Wrapped in amber and woody notes with a delicate powdery finish, it is a sophisticated fragrance that feels both alluring and effortlessly elegant.",
+  "price": 1350,
+  "name": "Secret Bloom",
+  "inspired_by": "Inspired By good girl Velvet fatale (CAROLINA HERR)",
+  "published": true,
+  "price_50": 2300,
   "image": "/uploads/secretbloom.jpg",
-  "price_50": 2550
+  "original_price": 1600,
+  "description": "Secret Bloom blends sweet vanilla, creamy cacao, and soft almond with radiant white florals and warm spices. Wrapped in amber and woody notes with a delicate powdery finish, it is a sophisticated fragrance that feels both alluring and effortlessly elegant.",
+  "category": "women",
+  "original_price_50": 2550
 }
