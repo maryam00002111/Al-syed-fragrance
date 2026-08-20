@@ -1,4 +1,9 @@
 {
+  "notes": {
+    "top": "Citrus,Fresh,Fruity",
+    "middle": "Floral,Rose,Sweet",
+    "base": "Patchouli,Woody,Musky,Powdery"
+  },
   "price": 1350,
   "name": "Floral Queen",
   "inspired_by": "",
