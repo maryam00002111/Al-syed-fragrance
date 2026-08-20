@@ -1,12 +1,15 @@
 {
-  "category": "men",
-  "published": true,
+  "price": 1399,
   "name": "Celestial Oud",
-  "price": 1650,
-  "price_50": 2550,
-  "description": "Celestial Oud captures the essence of elegance and mystery. Fresh aromatic greens and luminous white florals meet warm spices, creating a beautifully balanced opening. As the scent settles, velvety musk, soft powdery accords, rich leather, and precious woods emerge, resting on a warm amber foundation. The result is a graceful, long-lasting fragrance that feels both ethereal and unforgettable.",
-  "image": "/uploads/celestialoud.jpg",
+  "inspired_by": "Inspired By White Oud",
   "extraCats": [
     "new-arrival"
-  ]
+  ],
+  "published": true,
+  "price_50": 2299,
+  "image": "/uploads/celestialoud.jpg",
+  "original_price": 1650,
+  "description": "Celestial Oud captures the essence of elegance and mystery. Fresh aromatic greens and luminous white florals meet warm spices, creating a beautifully balanced opening. As the scent settles, velvety musk, soft powdery accords, rich leather, and precious woods emerge, resting on a warm amber foundation. The result is a graceful, long-lasting fragrance that feels both ethereal and unforgettable.",
+  "category": "men",
+  "original_price_50": 2550
 }
