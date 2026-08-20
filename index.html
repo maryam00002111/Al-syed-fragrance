@@ -294,6 +294,19 @@
   .prod-info{padding:16px 4px 8px}
   .prod-name{font-family:'Fraunces',serif;font-size:18px;font-weight:500;color:var(--off-white);margin-bottom:6px;line-height:1.3}
   .prod-price{font-size:13px;font-weight:600;color:var(--gold);letter-spacing:1px}
+    .prod-price .price-original{
+  color:#e00000;
+  text-decoration:line-through;
+  text-decoration-color:#e00000;
+  text-decoration-thickness:2px;
+  margin-right:8px;
+  font-weight:500;
+}
+
+.prod-price .price-current{
+  color:#000000;
+  font-weight:700;
+}
   .prod-size-hint{font-size:10px;color:var(--text-muted);letter-spacing:1px;margin-top:4px}
 
   /* ===== DISCOUNTED PRICE DISPLAY (original price struck through + current price) ===== */
@@ -1632,7 +1645,7 @@ window.addEventListener('load',()=>{ setTimeout(hideLoader, 4000); });
 
 // ---- CONFIGURE YOUR GITHUB REPO HERE ----
 const GITHUB_USER = 'maryam00002111';   // ← change this
-const GITHUB_REPO = 'testing-Alsyed-fragrance';       // ← change this if different
+const GITHUB_REPO = 'AI-syed-fragrance';       // ← change this if different
 const GITHUB_BRANCH = 'main';
 // -----------------------------------------
 
@@ -1697,22 +1710,33 @@ async function loadCMSData(){
           // Notes = optional Top/Middle/Base fragrance notes
           const notes = (d.notes && typeof d.notes === 'object') ? d.notes : {};
           cmsProducts.push({
-            id: i + 1,
-            name:     d.name        || '',
-            cat:      d.category    || 'new-arrival',
-            extraCats: Array.isArray(d.extraCats) ? d.extraCats : [],
-            price:    Number(d.price) || 0,
-            price50:  d.price_50 ? Number(d.price_50) : null,
-            originalPrice:   d.original_price ? Number(d.original_price) : null,
-            originalPrice50: d.original_price_50 ? Number(d.original_price_50) : null,
-            badge:    d.badge       || null,
-            desc:     d.description || '',
-            inspiredBy: d.inspired_by || '',
-            img:      mainImg,
-            images:   images,
-            videos:   videos,
-            notes:    notes
-          });
+  id: i + 1,
+  name:     d.name        || '',
+  cat:      d.category    || 'new-arrival',
+  extraCats: Array.isArray(d.extraCats) ? d.extraCats : [],
+
+  // Customer buying prices
+  price:    Number(d.price) || 0,
+  price50:  d.price_50 !== undefined && d.price_50 !== null && d.price_50 !== ''
+              ? Number(d.price_50)
+              : null,
+
+  // CMS-editable original / crossed prices
+  originalPrice: d.original_price !== undefined && d.original_price !== null && d.original_price !== ''
+                  ? Number(d.original_price)
+                  : null,
+
+  originalPrice50: d.original_price_50 !== undefined && d.original_price_50 !== null && d.original_price_50 !== ''
+                    ? Number(d.original_price_50)
+                    : null,
+
+  badge:    d.badge       || null,
+  desc:     d.description || '',
+  img:      mainImg,
+  images:   images,
+  videos:   videos,
+  notes:    notes
+});
         }
       });
     }
@@ -2093,6 +2117,24 @@ function priceMarkup(price, originalPrice, prefix){
     return `<span class="price-original">${prefix}Rs ${Number(originalPrice).toLocaleString()}</span><span class="price-current">Rs ${Number(price).toLocaleString()}</span>`;
   }
   return `${prefix}Rs ${Number(price).toLocaleString()}`;
+}
+  function priceMarkup(price, originalPrice, prefix = '') {
+  const currentPrice = Number(price);
+
+  const hasOriginal =
+    originalPrice !== null &&
+    originalPrice !== undefined &&
+    originalPrice !== '' &&
+    !isNaN(Number(originalPrice));
+
+  if (!hasOriginal) {
+    return `${prefix}Rs ${currentPrice.toLocaleString()}`;
+  }
+
+  return `
+    <span class="price-original">Rs ${Number(originalPrice).toLocaleString()}</span>
+    <span class="price-current">${prefix}Rs ${currentPrice.toLocaleString()}</span>
+  `;
 }
 function productCardHTML(p){
   const priceDisplay = priceMarkup(p.price, p.originalPrice, p.cat==='bundle' ? '' : 'From ');
