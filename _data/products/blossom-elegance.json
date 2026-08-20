@@ -1,13 +1,16 @@
 {
   "badge": null,
-  "price": 1600,
+  "price": 1350,
   "name": "MidNight",
+  "inspired_by": "Inspired By Victoria Secret BombShell",
   "extraCats": [
     "new-arrival"
   ],
   "published": true,
-  "price_50": 2650,
+  "price_50": 2399,
   "image": "/uploads/midnight.jpg",
+  "original_price": 1600,
   "description": "Midnight blends luscious fruits, sparkling citrus, and tropical sweetness with soft floral and white floral notes. Fresh, radiant, and effortlessly charming, it is a fragrance that captures the magic of warm evenings and unforgettable moments.",
-  "category": "women"
+  "category": "women",
+  "original_price_50": 2650
 }
