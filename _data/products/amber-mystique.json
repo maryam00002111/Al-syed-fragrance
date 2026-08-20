@@ -1,13 +1,16 @@
 {
-  "badge": "New",
-  "price": 1650,
+  "badge": "Hot Seller🔥",
+  "price": 1350,
   "name": "Dark Hide",
+  "inspired_by": "Inspired By One Million",
   "extraCats": [
     "new-arrival"
   ],
   "published": true,
-  "price_50": 2600,
+  "price_50": 2350,
   "image": "/uploads/darkhide.jpg",
+  "original_price": 1600,
   "description": "This perfume opens with a soft blend of citrus and almond, giving a fresh yet slightly nutty first impression. As it settles, delicate white florals and a powdery softness create an elegant and clean heart that feels smooth and feminine.\nIn the base, warm vanilla, cacao, amber, and woody notes come forward, adding depth, sweetness, and a cozy sensual warmth. A touch of warm spice enhances the richness and makes the scent more luxurious and long-lasting.\nOverall, it is a sweet, warm, and slightly gourmand fragrance with a soft floral elegance and a creamy, comforting finish.",
-  "category": "men"
+  "category": "men",
+  "original_price_50": 2600
 }
