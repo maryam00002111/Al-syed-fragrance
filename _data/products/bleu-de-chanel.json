@@ -1,12 +1,14 @@
 {
-  "category": "men",
-  "published": true,
+  "price": 1399,
   "name": "Bleu de Chanel",
-  "price": 1650,
-  "price_50": 2650,
-  "description": "Bleu de Chanel is a timeless and sophisticated fragrance that opens with a burst of vibrant citrus and fresh aromatic notes. A blend of crisp spices adds energy and refinement, while warm amber and rich woods create depth and character. Subtle smoky and balsamic undertones lend an air of mystery, softened by a smooth powdery finish. Fresh, elegant, and confidently masculine, Bleu de Chanel leaves a lasting impression of effortless luxury.",
-  "image": "/uploads/whatsapp-image-2026-07-31-at-12.46.25-pm.jpeg",
   "extraCats": [
     "new-arrival"
-  ]
+  ],
+  "published": true,
+  "price_50": 2399,
+  "image": "/uploads/whatsapp-image-2026-07-31-at-12.46.25-pm.jpeg",
+  "original_price": 1600,
+  "description": "Bleu de Chanel is a timeless and sophisticated fragrance that opens with a burst of vibrant citrus and fresh aromatic notes. A blend of crisp spices adds energy and refinement, while warm amber and rich woods create depth and character. Subtle smoky and balsamic undertones lend an air of mystery, softened by a smooth powdery finish. Fresh, elegant, and confidently masculine, Bleu de Chanel leaves a lasting impression of effortless luxury.",
+  "category": "men",
+  "original_price_50": 2650
 }
