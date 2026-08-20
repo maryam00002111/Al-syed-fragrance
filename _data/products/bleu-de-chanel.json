@@ -1,4 +1,9 @@
 {
+  "notes": {
+    "top": "Grapefruit,Lemon,Mint,Bergamot,Pink Pepper",
+    "middle": "Ginger,Nutmeg,Jasmine,Melon",
+    "base": "I Amber,Cedar,Sandalwood,Amberwood,Patchouli"
+  },
   "price": 1399,
   "name": "Bleu de Chanel",
   "extraCats": [
