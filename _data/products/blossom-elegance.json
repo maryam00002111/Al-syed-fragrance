@@ -1,4 +1,9 @@
 {
+  "notes": {
+    "top": "Fruity,Floral,Citrus,Fresh",
+    "middle": "White Floural,Sweet,Rose,Tropical",
+    "base": "Creamy Vanilla,woody,Musk"
+  },
   "badge": null,
   "price": 1350,
   "name": "MidNight",
