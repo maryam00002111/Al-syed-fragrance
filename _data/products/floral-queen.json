@@ -1,12 +1,15 @@
 {
-  "category": "women",
-  "published": true,
-  "description": "A refreshing burst of citrus and juicy fruity notes creates a bright and uplifting opening. The heart reveals a soft blend of elegant florals and romantic rose, balanced with a subtle sweetness. As the fragrance settles, warm patchouli, smooth woody accords, soft musk, and powdery notes leave a refined, long-lasting trail that feels both comforting and sophisticated.",
+  "price": 1350,
   "name": "Floral Queen",
-  "price": 1600,
-  "price_50": 2600,
-  "image": "/uploads/whatsapp-image-2026-07-31-at-11.09.13-am.jpeg",
+  "inspired_by": "",
   "extraCats": [
     "new-arrival"
-  ]
+  ],
+  "published": true,
+  "price_50": 2350,
+  "image": "/uploads/whatsapp-image-2026-07-31-at-11.09.13-am.jpeg",
+  "original_price": 1600,
+  "description": "A refreshing burst of citrus and juicy fruity notes creates a bright and uplifting opening. The heart reveals a soft blend of elegant florals and romantic rose, balanced with a subtle sweetness. As the fragrance settles, warm patchouli, smooth woody accords, soft musk, and powdery notes leave a refined, long-lasting trail that feels both comforting and sophisticated.",
+  "category": "women",
+  "original_price_50": 2600
 }
