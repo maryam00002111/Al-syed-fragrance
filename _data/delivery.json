@@ -1,5 +1,6 @@
 {
   "enabled": true,
   "amount": 300,
-  "label": "delivery charges"
+  "label": "delivery charges",
+  "free_threshold": 3000
 }
