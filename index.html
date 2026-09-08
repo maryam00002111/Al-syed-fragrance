@@ -2305,10 +2305,14 @@ function handleFeaturedLoopScroll(){
     if(!wrap || !track) return;
     const halfWidth = track.scrollWidth / 2;
     if(halfWidth <= 0) return;
-    if(wrap.scrollLeft >= halfWidth - 2){
+        if(wrap.scrollLeft >= halfWidth - 2){
+      wrap.style.scrollBehavior = 'auto';
       wrap.scrollLeft -= halfWidth;
+      wrap.style.scrollBehavior = '';
     } else if(wrap.scrollLeft <= 0){
+      wrap.style.scrollBehavior = 'auto';
       wrap.scrollLeft += halfWidth;
+      wrap.style.scrollBehavior = '';
     }
   }, 120);
 }
